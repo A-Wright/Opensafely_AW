@@ -20,9 +20,11 @@ actions:
       moderately_sensitive:
         cohort: output/descriptive.png
 
- ## describe_stata:
-   ## run: stata-mp:latest analysis/report.do
-   ## needs: [generate_study_population]
-   ## outputs:
-     ## moderately_sensitive:
-       ## cohort: output/descriptive_stata.png       
+  describe_stata:
+    run: stata-mp:latest analysis/report.do
+    needs: [generate_study_population]
+    outputs:
+      moderately_sensitive:
+        hist1: output/descriptive_stata.gph 
+        hist2: output/descriptive_stata.svg 
+              
